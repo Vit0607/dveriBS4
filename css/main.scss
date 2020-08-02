@@ -1,5 +1,6 @@
 $primary-color-dark: #303F9F;
 $primary-color: #3F51B5;
+$pr-color: '3f51b5';
 $primary-color-light: #C5CAE9;
 $primary-color-text: #FFFFFF;
 $accent-color: #448AFF;
@@ -308,6 +309,7 @@ body {
                 transform: scale(1.2);
             }
         }
+
         input {
             width: 100%;
             padding: 1rem;
@@ -316,10 +318,34 @@ body {
             margin-bottom: 1rem;
             @include input-color($primary-color-text);
         }
+
         button {
             color: $primary-color-text;
             border: 2px solid $primary-color-text;
             padding: 1rem;
+        }
+    }
+
+    //Отзывы
+    .reviews {
+        @include background-img('../img/background.jpg');
+        padding-bottom: 3rem;
+
+        .card {
+            height: 100%;
+
+            h5 {
+                font-size: 1em;
+                color: $primary-color;
+            }
+        }
+
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23#{$pr-color}' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+        }
+
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23#{$pr-color}' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
         }
     }
 }
